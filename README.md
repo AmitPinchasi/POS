@@ -1,4 +1,3 @@
 # POS
-Pinchasi Operating system - 32 bit
-----------------------------------
+## Pinchasi Operating system - 32 bit
 
