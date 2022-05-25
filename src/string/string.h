@@ -2,7 +2,7 @@
 #define STRING_H
 #include <stdbool.h>
 
-int strstr(const char* haystack, const char* needle);
+char* strstr(const char* haystack, const char* needle);
 int strlen(const char* ptr);
 int strnlen(const char* ptr, int max);
 bool isdigit(char c);

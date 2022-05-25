@@ -358,12 +358,14 @@ static int process_load_data(const char* filename, struct process* process)
 {
     int res = 0;
     /*
+    res = process_load_elf(filename, process);
     if(strstr(filename, ".bin"))
     {
         res = process_load_binary(filename, process);
     }
     else if(strstr(filename, ".elf"))
     {
+        print("lol");
         res = process_load_elf(filename, process);
     }
     else
@@ -371,13 +373,30 @@ static int process_load_data(const char* filename, struct process* process)
         res = -EINFORMAT;
     }
     */
+
+    if(strstr(filename, ".elf")){
+
+        res = process_load_elf(filename, process);
+    }
+    else if(strstr(filename, ".bin")){
+
+        res = process_load_binary(filename, process);
+    }
+    else{
+
+        res = -EINFORMAT;
+    }
+    return res;
+    /*
     res = process_load_elf(filename, process);
     if (res == -EINFORMAT)
     {
+        print("running binary");
         res = process_load_binary(filename, process);
     }
-    
+
     return res;
+    */
 }
 
 int process_map_binary(struct process* process)

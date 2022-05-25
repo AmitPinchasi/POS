@@ -1,21 +1,17 @@
 #include "string.h"
+#include "stddef.h"
 
 
+char* strstr(const char* haystack, const char* needle){
 
-int strstr(const char* haystack, const char* needle){
-    int i, j;
-    for(i = 0; haystack[i] != '\0'; i++){
-        for(j = 0; needle[j] != '\0'; j++){
-            if(haystack[i+j] != needle[j]){
-                break;
-            }
-        }
-        if(needle[j] == '\0'){
-            return i;
+    for(int i = 0; i <= (strlen(haystack)-strlen(needle)); i++){
+        if(strncmp(haystack+i, needle, strlen(needle)) == 0){
+            return (char*)haystack+i;
         }
     }
-    return -1;
+    return NULL;
 }
+
 
 
 char tolower(char s1)

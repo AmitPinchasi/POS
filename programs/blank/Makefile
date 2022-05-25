@@ -9,4 +9,4 @@ all: ${FILES}
 
 clean:
 	rm -rf ${FILES}
-	rm ./blank.elf
+#	rm ./blank.elf
