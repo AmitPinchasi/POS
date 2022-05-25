@@ -39,25 +39,3 @@ void* memcpy(void* dest, void* src, int len)
     }
     return dest;
 }
-
-void* memmove(void *dest, void *src, size_t n)
-{
-   //casting src and dest addresses (void *) to (char *)
-   //for handling 1 byte
-   char *csrc = (char *)src;
-   char *cdest = (char *)dest;
-  
-   //creating the temp array to store the src 
-   char *temp = (char*) malloc(1*n);
-  
-   //src to temp
-   for (int i=0; i<n; i++)
-       temp[i] = csrc[i];
-  
-   //temp to dest
-   for (int i=0; i<n; i++)
-       cdest[i] = temp[i];
-  
-   free(temp);
-   return dest;
-}
