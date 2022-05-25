@@ -3,6 +3,7 @@
 
 #include <stdbool.h>
 
+char* strstr(const char* haystack, const char* needle);
 char tolower(char s1);
 int strlen(const char* ptr);
 int strnlen(const char* ptr, int max);

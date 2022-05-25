@@ -1,5 +1,16 @@
 #include "string.h"
 
+char* strstr(const char* haystack, const char* needle){
+
+    for(int i = 0; i <= (strlen(haystack)-strlen(needle)); i++){
+        if(strncmp(haystack+i, needle, strlen(needle)) == 0){
+            return (char*)haystack+i;
+        }
+    }
+    return NULL;
+}
+
+
 char tolower(char s1)
 {
     if (s1 >= 65 && s1 <= 90)
