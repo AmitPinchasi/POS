@@ -10,7 +10,6 @@ struct command_argument* pos_parse_command(const char* command, int max)
         return 0;
     }
 
-
     strncpy(scommand, command, sizeof(scommand));
     char* token = strtok(scommand, " ");
     if (!token)
