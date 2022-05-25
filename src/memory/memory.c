@@ -1,4 +1,5 @@
 #include "memory.h"
+#include "heap/kheap.h"
 
 void* memset(void* ptr, int c, size_t size)
 {
@@ -44,7 +45,7 @@ void* memmove(void *dest, void *src, size_t n)
    char *cdest = (char *)dest;
   
    //creating the temp array to store the src 
-   char *temp = (char*) malloc(1*n);
+   char *temp = (char*) kmalloc(1*n);
   
    //src to temp
    for (int i=0; i<n; i++)
@@ -54,6 +55,6 @@ void* memmove(void *dest, void *src, size_t n)
    for (int i=0; i<n; i++)
        cdest[i] = temp[i];
   
-   free(temp);
+   kfree(temp);
    return dest;
 }

@@ -1,6 +1,7 @@
 #ifndef STRING_H
 #define STRING_H
 #include <stdbool.h>
+#include <stddef.h>
 
 char* strstr(const char* haystack, const char* needle);
 int strlen(const char* ptr);

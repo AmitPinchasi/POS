@@ -5,7 +5,8 @@
         "stdlib.h": "c",
         "shell.h": "c",
         "peachos.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "stddef.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

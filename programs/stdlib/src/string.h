@@ -2,6 +2,7 @@
 #define POS_STRING_H
 
 #include <stdbool.h>
+#include <stddef.h>
 
 char* strstr(const char* haystack, const char* needle);
 char tolower(char s1);
