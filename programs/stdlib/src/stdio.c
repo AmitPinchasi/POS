@@ -15,6 +15,7 @@ int printf(const char *fmt, ...)
     va_list ap;
     const char *p;
     char* sval;
+    char c;
     int ival;
 
     va_start(ap, fmt);
@@ -36,6 +37,10 @@ int printf(const char *fmt, ...)
         case 's':
             sval = va_arg(ap, char *);
             print(sval);
+            break;
+        case 'c':
+            sval = va_arg(ap, char);
+            print(c);
             break;
         default:
             putchar(*p);
